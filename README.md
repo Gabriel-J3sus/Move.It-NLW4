@@ -26,5 +26,6 @@ O Move.It é um projeto que visa melhorar a produtividade das pessoas, principal
 
 - [Next.js](https://nextjs.org/)
 - [React](https://reactjs.org)
+- [Typescript](https://www.typescriptlang.org/)
 
 ## 🧠 Desafios
