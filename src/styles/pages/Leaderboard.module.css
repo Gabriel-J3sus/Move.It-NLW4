@@ -1,0 +1,26 @@
+.container {
+  height: 100vh;
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.container header {
+  margin-bottom: 40px;
+}
+
+.container header h2 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 46px;
+  color: #2E384D;
+}
+
+.container main .leaderboardTableTitle {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr 1fr;
+  grid-gap: 4px;
+}

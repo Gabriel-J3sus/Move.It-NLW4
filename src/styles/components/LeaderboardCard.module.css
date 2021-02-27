@@ -1,0 +1,9 @@
+.leaderboardCardContainer {
+  width: 960px;
+  height: 96px;
+
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr 1fr;
+  grid-gap: 4px;
+  background: red;
+}

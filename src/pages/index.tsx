@@ -8,7 +8,7 @@ import { Countdown } from "../components/Countdown";
 import { ExperienceBar } from "../components/ExperienceBar";
 import { Profile } from "../components/Profile";
 import { ChallengeBox } from "../components/ChallengeBox";
-
+import { SideBar } from "../components/SideBar";
 
 import styles from '../styles/pages/Home.module.css';
 
@@ -45,6 +45,8 @@ export default function Home({ level, currentExperience, challengesCompleted }: 
           </section>
         </CountdownProvider>
       </div>
+
+      <SideBar page='home'/>
     </ChallengesProvider>
   )
 }
