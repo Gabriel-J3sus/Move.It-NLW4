@@ -1,9 +1,98 @@
 .leaderboardCardContainer {
-  width: 960px;
-  height: 96px;
+  max-width: 960px;
+  max-height: 96px;
+  width: 100%;
+  height: 100%;
+
+  margin-bottom: 8px;
 
   display: grid;
-  grid-template-columns: 1fr 4fr 1fr 1fr;
+  grid-template-columns: 0.5fr 5.5fr;
   grid-gap: 4px;
-  background: red;
 }
+
+.position {
+  width: 72px;
+  max-height: 96px;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--white);
+  border-radius: 5px 0px 0px 5px;
+}
+
+.position h2 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.81rem;
+}
+
+.mainContainer {
+  display: grid;
+  grid-template-columns: 3fr 1.5fr 1fr;
+  align-items: center;
+
+  max-height: 96px;
+  height: 100%;
+
+  padding: 1rem 2rem 2rem 2rem;
+
+  border-radius: 0px 5px 5px 0px;
+  background: var(--white);
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.user img {
+  width: 4rem;
+  height: 4rem;
+
+  border-radius: 50%;
+
+  margin-right: 1rem;
+}
+
+.user p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.user p h3 {
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+
+  color: var(--title);
+
+  margin-bottom: 8px;
+}
+
+.user p span img {
+  width: 0.875rem;
+  height: 1rem;
+}
+
+.challenges {
+  display: flex;
+  justify-content: center;
+  margin-left: 20px;
+}
+
+.challenges h3, .experience h3 {
+  display: flex;
+}
+
+.challenges p, .experience p {
+  color: var(--blue);
+  margin-right: 5px;
+}
+
+

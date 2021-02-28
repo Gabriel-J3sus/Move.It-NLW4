@@ -16,7 +16,7 @@ export function SideBar({ page }: BarProps) {
       <img src="logo.svg" alt="Logo"/>
 
       <footer>
-        <Link href="/">
+        <Link href="/home">
           <div className={styles.homeButton} style={homeButtonColors}>
             <FiHome size={32} style={{marginLeft: "36px"}} />
           </div>

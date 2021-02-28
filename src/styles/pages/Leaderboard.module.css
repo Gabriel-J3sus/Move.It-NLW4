@@ -1,5 +1,5 @@
 .container {
-  height: 100vh;
+  width: 100%;
   max-width: 992px;
   margin: 0 auto;
   padding: 2.5rem 2rem;
@@ -9,18 +9,19 @@
 }
 
 .container header {
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 
 .container header h2 {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 600;
-  line-height: 46px;
+  line-height: 2.875rem;
   color: #2E384D;
 }
 
 .container main .leaderboardTableTitle {
   display: grid;
-  grid-template-columns: 1fr 4fr 1fr 1fr;
-  grid-gap: 4px;
+  grid-template-columns: 0.7fr 2.8fr 1fr 1fr;
+
+  margin-bottom: 1.5rem;
 }

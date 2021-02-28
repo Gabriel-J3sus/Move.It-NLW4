@@ -25,6 +25,10 @@ export default function leaderboard() {
         </div>
 
         <LeaderboardCard />
+        <LeaderboardCard />
+        <LeaderboardCard />
+        <LeaderboardCard />
+
       </main>
 
       <SideBar page='leaderboard' />

@@ -1,0 +1,95 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding-right: 12.5rem;
+
+  background: url('/background-logo.svg') no-repeat;
+  background-color: var(--blue);
+}
+
+.formContainer img {
+  max-width: 420px;
+  max-height: 422px;
+
+  margin-bottom: 6rem;
+}
+
+.formContainer h2 {
+  margin-bottom: 1.5rem;
+
+  font-weight: 600;
+  font-size: 2.25rem;
+  line-height: 2.8rem;
+
+  color: #FFFFFF;
+}
+
+.githubAuthContainer {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 3rem;
+}
+
+.githubAuthContainer p {
+  margin-left: 1.5rem;
+  max-width: 254px;
+
+  font-size: 1.25rem;
+  line-height: 1.87rem;
+  color: var(--text-highlight);
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+}
+
+.inputContainer input {
+  width: 21rem;
+  height: 5rem;
+  padding: 1.4rem 1.8rem;
+
+  border: 1.5px solid transparent;
+
+  background: linear-gradient(90deg, #4953B8 0%, rgba(73, 83, 184, 0.2) 100%);
+  color: var(--white);
+
+  font-size: 1.25rem;
+  line-height: 2.1rem;
+
+  border-radius: 5px 0px 0px 5px;
+  outline: none;
+}
+
+.inputContainer input:hover, .inputContainer input:focus {
+  border: 1.5px solid #414AA3;
+}
+
+.inputContainer input::-webkit-input-placeholder {
+  color: var(--text-highlight);
+}
+
+.inputContainer button {
+  width: 5rem;
+  height: 5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--blue-dark);
+
+  border: none;
+  border-radius: 0px 5px 5px 0px;
+  transition: background 0.5s;
+}
+
+.inputContainer button:hover {
+  background: var(--green);
+}

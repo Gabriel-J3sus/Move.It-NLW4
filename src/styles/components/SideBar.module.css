@@ -11,7 +11,7 @@
   flex-direction: column;
   justify-content: center;
 
-  padding-top: 32px;
+  padding-top: 2rem;
 
   background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
   filter: drop-shadow(0px 0px 60px rgba(0, 0, 0, 0.05));
@@ -19,11 +19,11 @@
 }
 
 .sideBarContainer img {
-  width: 48px;
-  height: 48px;
+  width: 3rem;
+  height: 3rem;
 
-  margin-left: 32px;
-  margin-top: 32px;
+  margin-left: 2rem;
+  margin-top: 2rem;
 
   position: absolute;
   top: 0;
@@ -36,7 +36,7 @@
 
 .homeButton, .rankButton {
   width: 100%;
-  height: 56px;
+  height: 3.5rem;
 
   max-width: 72px;
 
