@@ -22,11 +22,17 @@
 
 O Move.It é um projeto que visa melhorar a produtividade das pessoas, principalmente de devs. Utilizando a estratégia de pomodoro que é feita em ciclos 25 minutos de alta concentração. Após os 25 minutos de foco, desafios com o objetivo de aprimorar a saúde do usuário, são enviados, e ao completar os desafios o usuário recebe uma quantidade de XP, aumentando o seu nível.
 
-## 🚀 Tecnologias
+## 🔖 Layout
 
-- [Next.js](https://nextjs.org/)
-- [React](https://reactjs.org)
-- [Typescript](https://www.typescriptlang.org/)
+Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/file/ge20pu3ofMOKoliUyKx1Nl/Move.it-1.0) ou acessar o layout 2.0 através [desse link](https://www.figma.com/file/NRQii6x1yrGYR2c0MQ7vQQ/Move.it-2.0-(Copy)?node-id=160%3A2761) . É necessário ter conta no [Figma](http://figma.com/) para acessá-lo.
+
+## 🗺 Como executar
+
+- Clone o repositório
+- Instale as dependências com `yarn`
+- Inicie o servidor com `yarn dev`
+
+Agora você pode acessar [`localhost:3000`](http://localhost:3000) do seu navegador.
 
 ## 🧠 Desafios
 
