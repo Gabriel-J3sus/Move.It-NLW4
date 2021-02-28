@@ -29,3 +29,5 @@ O Move.It é um projeto que visa melhorar a produtividade das pessoas, principal
 - [Typescript](https://www.typescriptlang.org/)
 
 ## 🧠 Desafios
+
+- [x] Layout 2.0;
