@@ -53,3 +53,9 @@
 .rankButton {
   margin-bottom: 0;
 }
+
+@media(max-width: 1190px) {
+  .sideBarContainer {
+    display: none;
+  }
+}

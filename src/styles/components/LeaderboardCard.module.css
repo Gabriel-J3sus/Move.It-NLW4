@@ -38,7 +38,7 @@
   max-height: 96px;
   height: 100%;
 
-  padding: 1rem 2rem 2rem 2rem;
+  padding: 1rem 2rem 2rem;
 
   border-radius: 0px 5px 5px 0px;
   background: var(--white);
@@ -83,10 +83,10 @@
 .challenges {
   display: flex;
   justify-content: center;
-  margin-left: 20px;
+  margin-left: 1.25rem;
 }
 
-.challenges h3, .experience h3 {
+.challenges, .experience {
   display: flex;
 }
 
@@ -95,4 +95,35 @@
   margin-right: 5px;
 }
 
+@media(max-width: 1090px) {
+  .user img {
+    width: 3rem;
+    height: 3rem;
+  }
 
+  .user p h3 {
+    font-size: 1.20rem;
+  }
+
+  .challenges p, .experience p {
+    font-size: 1.2rem;
+  }
+
+  .challenges h3, .experience h3 {
+    display: none;
+  }
+}
+
+@media(max-width: 720px) {
+  .position {
+    width: 30px;
+  }
+
+  .mainContainer {
+    padding: 0.7rem 0.5rem 1rem;
+  }
+
+  .user p span img {
+    display: none;
+  }
+}

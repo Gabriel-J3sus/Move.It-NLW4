@@ -6,7 +6,6 @@ import { AiFillGithub, AiOutlineArrowRight } from 'react-icons/ai';
 import styles from '../styles/pages/Login.module.css';
 
 export default function Login() {
-
   return (
     <div className={styles.container}>
       <Head>
@@ -24,7 +23,7 @@ export default function Login() {
         </div>
 
         <div className={styles.inputContainer}>
-          <input type="text" placeholder="Digite seu username" name="authInput" defaultValue="d" />
+          <input type="text" placeholder="Digite seu username" name="authInput" />
 
           <button>
             <AiOutlineArrowRight size={24} color="var(--white)"/>

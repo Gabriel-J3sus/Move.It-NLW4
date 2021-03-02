@@ -25,3 +25,13 @@
 
   margin-bottom: 1.5rem;
 }
+
+@media(max-width: 720px) {
+  .container {
+    padding: 2.5rem 1rem;
+  }
+
+  .container main .leaderboardTableTitle {
+    display: none;
+  }
+}

@@ -8,7 +8,7 @@
 
   padding-right: 12.5rem;
 
-  background: url('/background-logo.svg') no-repeat;
+  background: url('/background-logo.svg') no-repeat left center;
   background-color: var(--blue);
 }
 
@@ -92,4 +92,64 @@
 
 .inputContainer button:hover {
   background: var(--green);
+}
+
+@media(max-width: 1090px) {
+  .container {
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+  }
+}
+
+@media(max-width: 720px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .formContainer img {
+    max-width: 300px;
+    max-height: 322px;
+
+    margin-bottom: 4rem;
+  }
+
+  .inputContainer input {
+    width: 19rem;
+  }
+
+  .inputContainer button {
+    width: 4.5rem;
+  }
+}
+
+@media(max-width: 355px) {
+  .container {
+    padding: 0;
+  }
+
+  .formContainer img {
+    max-width: 250px;
+    max-height: 222px;
+  }
+
+  .githubAuthContainer p {
+    margin-left: 1rem;
+    max-width: 200px;
+  }
+
+  .inputContainer input {
+    width: 15.5rem;
+  }
+
+  .inputContainer button {
+    width: 3.5rem;
+  }
 }

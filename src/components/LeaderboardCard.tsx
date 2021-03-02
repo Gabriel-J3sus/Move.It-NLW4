@@ -22,11 +22,13 @@ export function LeaderboardCard() {
 
 
         <div className={styles.challenges}>
-          <h3><p>127</p> completados</h3>
+        <p>127</p>
+        <h3>completados</h3>
         </div>
 
         <div className={styles.experience}>
-          <h3><p>154000</p> xp</h3>
+          <p>154000</p>
+          <h3>xp</h3>
         </div>
 
 

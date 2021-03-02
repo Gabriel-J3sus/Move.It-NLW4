@@ -34,12 +34,12 @@ export default function Home({ level, currentExperience, challengesCompleted }: 
 
         <CountdownProvider>
           <section>
-            <div>
+            <div className={styles.userAndCounterContainer}>
               <Profile />
               <CompletedChallenges />
               <Countdown />
             </div>
-            <div>
+            <div className={styles.challengeContainer}>
               <ChallengeBox />
             </div>
           </section>
