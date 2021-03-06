@@ -1,3 +1,4 @@
+import { useSession } from 'next-auth/client';
 import Head from 'next/head';
 import { GetServerSideProps } from 'next';
 
@@ -19,35 +20,37 @@ interface HomeProps {
 }
 
 export default function Home({ level, currentExperience, challengesCompleted }: HomeProps) {
+  const [session, loading] = useSession()
+
   return (
-    <ChallengesProvider
-      level={level}
-      currentExperience={currentExperience}
-      challengesCompleted={challengesCompleted}
-    >
-      <div className={styles.container}>
-        <Head>
-          <title>Inicio | move.it</title>
-        </Head>
+      <ChallengesProvider
+        level={level}
+        currentExperience={currentExperience}
+        challengesCompleted={challengesCompleted}
+      >
+        <div className={styles.container}>
+          <Head>
+            <title>Inicio | move.it</title>
+          </Head>
 
-        <ExperienceBar />
+          <ExperienceBar />
 
-        <CountdownProvider>
-          <section>
-            <div className={styles.userAndCounterContainer}>
-              <Profile />
-              <CompletedChallenges />
-              <Countdown />
-            </div>
-            <div className={styles.challengeContainer}>
-              <ChallengeBox />
-            </div>
-          </section>
-        </CountdownProvider>
-      </div>
+          <CountdownProvider>
+            <section>
+              <div className={styles.userAndCounterContainer}>
+                <Profile />
+                <CompletedChallenges />
+                <Countdown />
+              </div>
+              <div className={styles.challengeContainer}>
+                <ChallengeBox />
+              </div>
+            </section>
+          </CountdownProvider>
+        </div>
 
-      <SideBar page='home'/>
-    </ChallengesProvider>
+        <SideBar page='home'/>
+      </ChallengesProvider>
   )
 }
 

@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { signOut } from 'next-auth/client';
+import { AiOutlinePoweroff } from 'react-icons/ai';
 import { FiHome, FiAward } from 'react-icons/fi';
 
 import styles from '../styles/components/SideBar.module.css';
@@ -15,7 +17,7 @@ export function SideBar({ page }: BarProps) {
     <div className={styles.sideBarContainer}>
       <img src="logo.svg" alt="Logo"/>
 
-      <footer>
+      <main>
         <Link href="/home">
           <div className={styles.homeButton} style={homeButtonColors}>
             <FiHome size={32} style={{marginLeft: "36px"}} />
@@ -27,7 +29,12 @@ export function SideBar({ page }: BarProps) {
             <FiAward size={32} style={{marginLeft: "36px"}} />
           </div>
         </Link>
-      </footer>
+      </main>
+
+
+      <button className={styles.logoutButton} onClick={() => signOut({callbackUrl: '/', redirect: true})}>
+        <AiOutlinePoweroff size={32}/>
+      </button>
     </div>
   );
 }

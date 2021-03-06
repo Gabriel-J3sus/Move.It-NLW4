@@ -1,11 +1,17 @@
-import { useEffect } from 'react';
-import Link from 'next/link';
 import Head from 'next/head';
+import Link from 'next/link';
+import { signIn, providers, useSession } from 'next-auth/client';
 import { AiFillGithub, AiOutlineArrowRight } from 'react-icons/ai';
 
 import styles from '../styles/pages/Login.module.css';
 
-export default function Login() {
+interface Providersprops {
+  providers: object;
+}
+
+export default function SignIn({ providers }: Providersprops) {
+  const [ session, loading ] = useSession();
+
   return (
     <div className={styles.container}>
       <Head>
@@ -17,19 +23,43 @@ export default function Login() {
 
         <h2>Bem-vindo</h2>
 
-        <div className={styles.githubAuthContainer}>
-          <AiFillGithub size={40} color="var(--text-highlight)" style={{ transform: "matrix(-1, 0, 0, 1, 0, 0)" }}/>
-          <p>Faça login com seu Github para começar</p>
-        </div>
+        {!session ? (
+          <>
+            <div className={styles.githubAuthContainer}>
+              <AiFillGithub size={40} color="var(--text-highlight)" style={{ transform: "matrix(-1, 0, 0, 1, 0, 0)" }}/>
+              <p>Faça login com seu Github para começar</p>
+            </div>
 
-        <div className={styles.inputContainer}>
-          <input type="text" placeholder="Digite seu username" name="authInput" />
+            {Object.values(providers).map(provider => (
+              <button key={provider.name} className={styles.buttonContainer} onClick={() => signIn(provider.id)}>
+                Logar com o Github
+                <span>
+                  <AiOutlineArrowRight size={24} />
+                </span>
+              </button>
 
-          <button>
-            <AiOutlineArrowRight size={24} color="var(--white)"/>
-          </button>
-        </div>
+            ))}
+          </>
+
+        ) : (
+          <Link href={'/home'}>
+            <button className={styles.buttonContainer}>
+              Entrar
+
+              <span>
+                <AiOutlineArrowRight size={24} />
+              </span>
+            </button>
+          </Link>
+        )}
+
       </div>
     </div>
   )
+}
+
+SignIn.getInitialProps = async () => {
+  return {
+    providers: await providers()
+  }
 }
