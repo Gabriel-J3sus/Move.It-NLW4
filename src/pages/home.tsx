@@ -22,6 +22,10 @@ interface HomeProps {
 export default function Home({ level, currentExperience, challengesCompleted }: HomeProps) {
   const [session, loading] = useSession()
 
+  if (loading) {
+    return <h1>Carregando...</h1>
+  }
+
   return (
       <ChallengesProvider
         level={level}
@@ -38,7 +42,7 @@ export default function Home({ level, currentExperience, challengesCompleted }: 
           <CountdownProvider>
             <section>
               <div className={styles.userAndCounterContainer}>
-                <Profile />
+                <Profile userName={session?.user.name}/>
                 <CompletedChallenges />
                 <Countdown />
               </div>

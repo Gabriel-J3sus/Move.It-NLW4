@@ -14,5 +14,11 @@ export default (req: NextApiRequest, res: NextApiResponse) => NextAuth(req, res,
     signIn: '/',
     signOut: '/home' || '/leaderboard',
     error: '/'
+  },
+
+  database: {
+    type: "sqlite",
+    database: ":memory:",
+    synchronize: true,
   }
 })

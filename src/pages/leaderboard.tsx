@@ -1,12 +1,18 @@
 import Head from 'next/head';
+import { useSession } from 'next-auth/client';
 
 import { SideBar } from '../components/SideBar';
 import { LeaderboardCard } from '../components/LeaderboardCard';
 
 import styles from '../styles/pages/Leaderboard.module.css';
-import { LogoutButton } from '../components/LogoutButton';
 
 export default function leaderboard() {
+  const [session, loading] = useSession();
+
+  if (loading) {
+    return <h1>Carregando...</h1>
+  }
+
   return (
     <div className={styles.container}>
       <Head>
