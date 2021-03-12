@@ -1,13 +1,32 @@
-import Head from 'next/head';
+import { useEffect } from 'react';
+import { GetServerSideProps } from 'next';
 import { useSession } from 'next-auth/client';
+import { useRouter } from 'next/dist/client/router';
+import Head from 'next/head';
 
 import { SideBar } from '../components/SideBar';
 import { LeaderboardCard } from '../components/LeaderboardCard';
 
 import styles from '../styles/pages/Leaderboard.module.css';
 
-export default function leaderboard() {
-  const [session, loading] = useSession();
+interface LeaderboardProps {
+  level: number;
+  currentExperience: number;
+  challengesCompleted: number;
+}
+
+export default function leaderboard({ level, currentExperience, challengesCompleted }: LeaderboardProps) {
+  const [session, loading] = useSession()
+
+  const router = useRouter()
+
+  useEffect(() => {
+    if (!session && !loading ) {
+      router.push('/signin');
+    } else {
+      return;
+    }
+  }, [session])
 
   if (loading) {
     return <h1>Carregando...</h1>
@@ -31,14 +50,29 @@ export default function leaderboard() {
           <p>Experiência</p>
         </div>
 
-        <LeaderboardCard />
-        <LeaderboardCard />
-        <LeaderboardCard />
-        <LeaderboardCard />
-
+        <LeaderboardCard 
+          username={session?.user.name} 
+          image={session?.user.image} 
+          level={level}
+          currentExperience={currentExperience}
+          challengesCompleted={challengesCompleted}
+        />
       </main>
 
       <SideBar page='leaderboard' />
     </div>
   )
+}
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const { level, currentExperience, challengesCompleted } = ctx.req.cookies;
+  
+
+  return {
+    props: {
+      level: Number(level),
+      currentExperience: Number(currentExperience),
+      challengesCompleted: Number(challengesCompleted),
+    }
+  }
 }

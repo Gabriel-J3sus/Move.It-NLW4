@@ -58,14 +58,14 @@
   margin-right: 1rem;
 }
 
-.user p {
+.user h3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
 
 }
 
-.user p h3 {
+.user h3 p {
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 1.5rem;
@@ -75,7 +75,7 @@
   margin-bottom: 8px;
 }
 
-.user p span img {
+.user h3 span img {
   width: 0.875rem;
   height: 1rem;
 }

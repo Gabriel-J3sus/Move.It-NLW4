@@ -45,31 +45,6 @@
   color: var(--text-highlight);
 }
 
-/* .inputContainer input {
-  width: 21rem;
-  height: 5rem;
-  padding: 1.4rem 1.8rem;
-
-  border: 1.5px solid transparent;
-
-  background: linear-gradient(90deg, #4953B8 0%, rgba(73, 83, 184, 0.2) 100%);
-  color: var(--white);
-
-  font-size: 1.25rem;
-  line-height: 2.1rem;
-
-  border-radius: 5px 0px 0px 5px;
-  outline: none;
-}
-
-.inputContainer input:hover, .inputContainer input:focus {
-  border: 1.5px solid #414AA3;
-} */
-
-/* .inputContainer input::-webkit-input-placeholder {
-  color: var(--text-highlight);
-} */
-
 .buttonContainer {
   display: flex;
   align-items: center;

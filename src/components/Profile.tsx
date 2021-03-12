@@ -3,15 +3,16 @@ import { ChallengesContext } from '../contexts/ChallengesContext';
 import styles from '../styles/components/Profile.module.css';
 
 interface ProfileProps {
-  userName: string
+  userName?: string;
+  image?: string;
 }
 
-export function Profile({ userName }: ProfileProps) {
+export function Profile({ userName, image }: ProfileProps) {
   const { level } = useContext(ChallengesContext);
 
   return (
     <div className={styles.profileContainer}>
-      <img src="https:github.com/Gabriel-J3sus.png" alt="Gabriel Jesus"/>
+      <img src={image} alt={userName} />
       <div>
         <strong> {userName} </strong>
         <p>

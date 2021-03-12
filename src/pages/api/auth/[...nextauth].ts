@@ -11,9 +11,8 @@ export default (req: NextApiRequest, res: NextApiResponse) => NextAuth(req, res,
   ],
 
   pages: {
-    signIn: '/',
-    signOut: '/home' || '/leaderboard',
-    error: '/'
+    signIn: '/signin',
+    signOut: '/' || '/leaderboard',
   },
 
   database: {

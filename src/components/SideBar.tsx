@@ -18,7 +18,7 @@ export function SideBar({ page }: BarProps) {
       <img src="logo.svg" alt="Logo"/>
 
       <main>
-        <Link href="/home">
+        <Link href="/">
           <div className={styles.homeButton} style={homeButtonColors}>
             <FiHome size={32} style={{marginLeft: "36px"}} />
           </div>
@@ -32,7 +32,7 @@ export function SideBar({ page }: BarProps) {
       </main>
 
 
-      <button className={styles.logoutButton} onClick={() => signOut({callbackUrl: '/', redirect: true})}>
+      <button className={styles.logoutButton} onClick={() => signOut({callbackUrl: '/signin', redirect: true})}>
         <AiOutlinePoweroff size={32}/>
       </button>
     </div>

@@ -1,6 +1,15 @@
+import { session } from 'next-auth/client';
 import styles from '../styles/components/LeaderboardCard.module.css';
 
-export function LeaderboardCard() {
+interface CardProps {
+  username?: string;
+  image?: string;
+  level: number;
+  currentExperience: number;
+  challengesCompleted: number;
+}
+
+export function LeaderboardCard({ username, image, level, challengesCompleted, currentExperience }: CardProps) {
   return (
     <div className={styles.leaderboardCardContainer}>
       <aside className={styles.position}>
@@ -9,25 +18,25 @@ export function LeaderboardCard() {
 
       <main className={styles.mainContainer}>
         <div className={styles.user}>
-          <img src="https:github.com/Gabriel-J3sus.png" alt="Gabriel Jesus"/>
+          <img src={image} alt={username}/>
 
-          <p>
-            <h3>Gabriel Jesus</h3>
+          <h3>
+            <p>{username}</p>
             <span>
               <img src="icons/level.svg" alt="Level"/>
-              Level 45
+              Level {level}
             </span>
-          </p>
+          </h3>
         </div>
 
 
         <div className={styles.challenges}>
-        <p>127</p>
+        <p>{challengesCompleted}</p>
         <h3>completados</h3>
         </div>
 
         <div className={styles.experience}>
-          <p>154000</p>
+          <p>{currentExperience}</p>
           <h3>xp</h3>
         </div>
 
