@@ -10,8 +10,6 @@ interface AuthProps {
 }
 
 export default function SignIn({ session }: AuthProps) {
-  // const [ session, loading ] = useSession();
-  console.log(session)
   return (
     <div className={styles.container}>
       <Head>

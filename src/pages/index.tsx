@@ -1,9 +1,8 @@
 import { useEffect } from 'react';
 import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/dist/client/router';
-import { getSession, useSession } from 'next-auth/client';
+import { getSession, Session, useSession } from 'next-auth/client';
 import Head from 'next/head';
-
 
 import { ChallengesProvider } from "../contexts/ChallengesContext";
 import { CountdownProvider } from "../contexts/CountdownContext";
@@ -22,9 +21,9 @@ interface HomeProps {
   challengesCompleted: number;
 }
 
-export default function Home({ level, currentExperience, challengesCompleted }: HomeProps) {
+export default function Home({level, currentExperience, challengesCompleted }: HomeProps) {
   const [session, loading] = useSession()
-
+  console.log('home: ', session)
   const router = useRouter()
 
   useEffect(() => {
@@ -74,9 +73,11 @@ export default function Home({ level, currentExperience, challengesCompleted }: 
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const { level, currentExperience, challengesCompleted } = ctx.req.cookies;
+  const session = await getSession(ctx)
 
   return {
     props: {
+      session,
       level: Number(level),
       currentExperience: Number(currentExperience),
       challengesCompleted: Number(challengesCompleted),

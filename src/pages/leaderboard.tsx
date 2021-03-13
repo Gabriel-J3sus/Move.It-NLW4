@@ -17,7 +17,7 @@ interface LeaderboardProps {
 
 export default function leaderboard({ level, currentExperience, challengesCompleted }: LeaderboardProps) {
   const [session, loading] = useSession()
-
+  console.log('leaderboard: ', session)
   const router = useRouter()
 
   useEffect(() => {
